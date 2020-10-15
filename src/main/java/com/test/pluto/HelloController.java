@@ -1,11 +1,11 @@
 package com.test.pluto;
 
 
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.HttpRequestHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.context.support.ContextExposingHttpServletRequest;
+import javax.servlet.http.HttpServletRequest;
 
 @RequestMapping("")
 @org.springframework.stereotype.Controller
@@ -26,8 +26,12 @@ public class HelloController {
         return "helloworld";
     }
 
-    @RequestMapping("/letsShoutDude")
-    public String letsShoutDude(){
-        return "helloworld";
+    @RequestMapping("/processFormTwo")
+    public String letsShoutDude(HttpServletRequest request, Model model) {
+        String theName = request.getParameter("studentName");
+        theName = theName.toUpperCase();
+        String result = "Yo! " + theName;
+        model.addAttribute("message", result);
+        return "student";
     }
 }
