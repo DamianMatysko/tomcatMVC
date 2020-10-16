@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<form action="processForm.html" method="GET">
+<form action="processFormThree" method="GET">
     <input type="text" name="studentName" placeholder=" What's your name?" />
     <input type="submit" />
 </form>

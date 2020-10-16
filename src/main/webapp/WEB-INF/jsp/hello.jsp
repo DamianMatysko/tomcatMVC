@@ -14,6 +14,6 @@
 <h2>${message}</h2>
 
 
-<a href="showForm">Hello World form</a>
+<a href="/hello/showForm.html">Hello World form</a>
 </body>
 </html>
