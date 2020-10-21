@@ -1,4 +1,4 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: FireflySK
@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<form action="processFormThree" method="GET">
+<form action="processFormTwo.html" method="GET">
     <input type="text" name="studentName" placeholder=" What's your name?" />
     <input type="submit" />
 </form>
